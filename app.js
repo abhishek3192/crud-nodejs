@@ -5,6 +5,7 @@ require("dotenv/config");
 const postRoute = require("./routes/posts");
 const bodyParser = require("body-parser");
 const cors = require('cors')
+const port = process.env.PORT || 5000
 
 // Middleware
 app.use(cors)
@@ -25,4 +26,4 @@ mongoose
     console.log(err);
   });
 
-app.listen(3000);
+app.listen(port);
